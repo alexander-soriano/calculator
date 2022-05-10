@@ -94,7 +94,6 @@ backspaceButton.addEventListener('click', () => {
 })
 
 document.addEventListener('keydown', (e) => {
-    console.log(e.code);
     const key = document.querySelector(`.${e.code}`)
     key.click();
 })
