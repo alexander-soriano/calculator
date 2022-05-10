@@ -27,9 +27,6 @@ function operate(operator,a,b) {
     } return
 }
 
-function displayFn() {
-    
-}
 
 let displayValue = '';
 let firstValue = '';
@@ -38,11 +35,6 @@ let operator = '';
 let operatorCheck;
 
 const display = document.querySelector('.display');
-
-const decimalButton = document.querySelector('.decimal');
-decimalButton.addEventListener('click', () => {
-    
-})
 
 const numberButtons = document.querySelectorAll('.number');
 numberButtons.forEach((numberButton) => {
@@ -100,5 +92,14 @@ backspaceButton.addEventListener('click', () => {
     displayValue = displayValue.substring(0,displayValue.length-1);
     display.textContent = displayValue;
 })
+
+document.addEventListener('keydown', (e) => {
+    console.log(e.code);
+    const key = document.querySelector(`.${e.code}`)
+    key.click();
+})
+
+const asd = document.querySelector('.number.asd');
+
 
 // to do: add +/- integer
